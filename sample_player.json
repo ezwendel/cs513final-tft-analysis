@@ -1,0 +1,186 @@
+{
+  "augments": [
+      "TFT6_Augment_ThrillOfTheHunt2",
+      "TFT6_Augment_EnchanterTrait",
+      "TFT6_Augment_RadiantRelics"
+  ],
+  "companion": {
+      "content_ID": "4bc07f9a-638d-4ba1-ac68-34ea83aa9352",
+      "skin_ID": 2,
+      "species": "PetSpiritFox"
+  },
+  "gold_left": 0,
+  "last_round": 27,
+  "level": 8,
+  "placement": 8,
+  "players_eliminated": 0,
+  "puuid": "0vThPFCVat_x78zAjQSiIlG5ISY_brcMwK4jGS4rdeEVbfayjRIHlfbFi00w7qk_N7keRCAcEV1mog",
+  "time_eliminated": 1615.346923828125,
+  "total_damage_to_players": 51,
+  "traits": [
+      {
+          "name": "Set6_Arcanist",
+          "num_units": 2,
+          "style": 1,
+          "tier_current": 1,
+          "tier_total": 4
+      },
+      {
+          "name": "Set6_Bodyguard",
+          "num_units": 2,
+          "style": 1,
+          "tier_current": 1,
+          "tier_total": 4
+      },
+      {
+          "name": "Set6_Chemtech",
+          "num_units": 1,
+          "style": 0,
+          "tier_current": 0,
+          "tier_total": 4
+      },
+      {
+          "name": "Set6_Clockwork",
+          "num_units": 1,
+          "style": 0,
+          "tier_current": 0,
+          "tier_total": 3
+      },
+      {
+          "name": "Set6_Debonair",
+          "num_units": 1,
+          "style": 0,
+          "tier_current": 0,
+          "tier_total": 3
+      },
+      {
+          "name": "Set6_Enchanter",
+          "num_units": 5,
+          "style": 4,
+          "tier_current": 4,
+          "tier_total": 4
+      },
+      {
+          "name": "Set6_Scrap",
+          "num_units": 1,
+          "style": 0,
+          "tier_current": 0,
+          "tier_total": 3
+      },
+      {
+          "name": "Set6_Socialite",
+          "num_units": 2,
+          "style": 2,
+          "tier_current": 2,
+          "tier_total": 4
+      },
+      {
+          "name": "Set6_Syndicate",
+          "num_units": 2,
+          "style": 0,
+          "tier_current": 0,
+          "tier_total": 3
+      },
+      {
+          "name": "Set6_Yordle",
+          "num_units": 1,
+          "style": 0,
+          "tier_current": 0,
+          "tier_total": 2
+      }
+  ],
+  "units": [
+      {
+          "character_id": "TFT6_Brand",
+          "itemNames": [
+              "TFT_Item_StatikkShiv",
+              "TFT_Item_RabadonsDeathcap",
+              "TFT_Item_MadredsBloodrazor"
+          ],
+          "items": [
+              24,
+              33,
+              12
+          ],
+          "name": "",
+          "rarity": 0,
+          "tier": 1
+      },
+      {
+          "character_id": "TFT6_Lulu",
+          "itemNames": [],
+          "items": [],
+          "name": "",
+          "rarity": 1,
+          "tier": 2
+      },
+      {
+          "character_id": "TFT6_Blitzcrank",
+          "itemNames": [
+              "TFT_Item_BFSword"
+          ],
+          "items": [
+              1
+          ],
+          "name": "",
+          "rarity": 1,
+          "tier": 2
+      },
+      {
+          "character_id": "TFT6_Morgana",
+          "itemNames": [
+              "TFT_Item_GargoyleStoneplate"
+          ],
+          "items": [
+              56
+          ],
+          "name": "Morgana",
+          "rarity": 2,
+          "tier": 2
+      },
+      {
+          "character_id": "TFT6_Senna",
+          "itemNames": [],
+          "items": [],
+          "name": "",
+          "rarity": 2,
+          "tier": 1
+      },
+      {
+          "character_id": "TFT6_Braum",
+          "itemNames": [],
+          "items": [],
+          "name": "",
+          "rarity": 3,
+          "tier": 2
+      },
+      {
+          "character_id": "TFT6_Orianna",
+          "itemNames": [
+              "TFT6_Item_SocialiteEmblemItem"
+          ],
+          "items": [
+              2193
+          ],
+          "name": "",
+          "rarity": 3,
+          "tier": 1
+      },
+      {
+          "character_id": "TFT6_Viktor",
+          "itemNames": [
+              "TFT5_Item_RabadonsDeathcapRadiant",
+              "TFT_Item_SpearOfShojin",
+              "TFT_Item_Quicksilver"
+          ],
+          "items": [
+              2033,
+              14,
+              69
+          ],
+          "name": "",
+          "rarity": 4,
+          "tier": 1
+      }
+  ]
+}

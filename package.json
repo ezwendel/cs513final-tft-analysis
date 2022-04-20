@@ -1,0 +1,15 @@
+{
+  "name": "cs513final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Elijah Wendel",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "fs": "0.0.1-security"
+  }
+}
