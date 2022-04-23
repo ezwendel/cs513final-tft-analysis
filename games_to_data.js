@@ -10,6 +10,11 @@ const continents = ["americas", "asia", "europe"]
 const rod_items = [33, 34, 35, 36, 37, 39, 23, 13, 38] // rabadons, archangels, locket, spark, morello, jg, guinsoos, gunblade, arcanist emblem
 const sword_items = [11, 12, 13, 14, 15, 16, 17, 19, 18] // db, gs, gunblade, shojin, edge of night, bt, zekes, ie, striker emblem
 const spat_items = [18, 28, 38, 48, 58, 68, 78, 89] // striker, challenger, arcanist, hextech, debonair, mutant, chemtech, assassin
+const offensive_items = [11, 12, 17, 19, 22, 23, 24, 26, 29, 33, 34, 39, 46]
+const defensive_items = [13, 15, 16, 49, 69, 79]
+const mana_items = [14, 44]
+const debuff_items = [37, 45, 57, 59, 67]
+const tank_items = [25, 27, 35, 36, 47, 55, 56, 66, 77]
 const one_cost_units = ["brand", "caitlyn", "camille", "darius", "caitlyn", "illaoi", "jarvaniv", "kassadin", "nocturne", "poppy", "singed", "twitch", "ziggs"]
 const two_cost_units = ["ashe", "blitzcrank", "corki", "lulu", "quinn", "reksai", "sejuani", "swain", "syndra", "talon", "warwick", "zilean", "zyra"]
 const three_cost_units = ["chogath", "ekko", "gangplank", "gnar", "leona", "lucian", "malzahar", "missfortune", "morgana", "senna", "tryndamere", "vex", "zac"]
@@ -19,19 +24,20 @@ const damage_units = ["brand", "caitlyn", "caitlyn", "twitch", "ziggs", "ashe", 
 const support_units = ["jarvaniv", "nocturne", "lulu", "quinn", "syndra", "zilean", "zyra", "ekko", "senna", "seraphine", "renata", "silco"]
 const tank_units = ["camille", "darius", "illaoi", "poppy", "singed", "blitzcrank", "reksai", "sejuani", "swain", "chogath", "gnar", "leona", "morgana", "vex", "zac", "alistar", "braum", "vi", "galio", "tahmkench"]
 const unplaced_units = ["jayce"]
-const emblem_or_trait_augments = ["ArcanistEmblem", "ArcanistEmblem2", "ArcanistTrait", "AssassinEmblem", "AssassinEmblem2", "AssassinTrait", "BruteEmblem", "BruteEmblem2", "BruteTrait", "ChallengerEmblem", "ChallengerEmblem2", "ChallengerTrait", "ChemtechEmblem", "ChemtechEmblem2", "ChemtechTrait", "ClockworkTrait", "ClockworkTrait2", "DebonairEmblem", "DebonairEmblem2", "DebonairTrait", "EnchanterTrait", "EnchanterTrait2", "EnforcerTrait", "ExperimentalEmblem", "ExperimentalEmblem2", "ExperimentalTrait", "HeroEmblem", "HeroEmblem2", "HeroTrait", "HextechEmblem", "HextechEmblem2", "HextechTrait", "InnovatorTrait", "MercenaryEmblem", "MercenaryTrait", "MercenaryTrait2"]
-const trait_combat_augments = ["ArcanistRunicShield1", "ArcanistRunicShield2", "ArcanistRunicShield3", "ArcanistSpellBlade", "AssassinCutthroat", "AssassinSmokeBomb", "BrawlerHPRegen1", "ChallengerEnGarde", "ChallengerForAllUnits", "ChemtechForAllUnits", "ChemtechInjection", "ChemtechOverload1", "ChemtechOverload2", "ClockworkBrokenStopwatch", "ColossusArmorPlating", "DebonairIrresistible", "DebonairVVIP", "EnchanterArdentCenser", "EnforcerSwiftJustice", "HeroStandBehindMe", "HextechForAllUnits", "HextechHexnova", "HextechStoredPower", "InnovatorSelfRepair", "MercenaryGoldReserves", "MercenaryPirates", "MutantUnstableEvolution"]
-const combat_buff_augments = ["Archangel2", "Ascension", "BlueBattery1", "BlueBattery2", "Disintegrator1", "Disintegrator2", "Disintegrator3", "Electrocharge1", "Electrocharge2", "Electrocharge3", "Featherweights1", "Featherweights2", "Featherweights3", "JeweledLotus", "LudensEcho1", "LudensEcho2", "LudensEcho3"]
-const positioning_combat_augments = ["Backfoot1", "Backfoot2", "Backfoot3", "Battlemage1", "Battlemage2", "Battlemage3", "Phalanx1", "Phalanx2", "Phalanx3"]
-const combat_healing_augments = ["CelestialBlessing1", "CelestialBlessing2", "CelestialBlessing3", "FirstAidKit"]
-const item_providing_augments = ["BandOfThieves1", "BinaryAirdrop", "ComponentGrabBag", "ItemGrabBag1", "ItemGrabBag2", "PandorasItems", "PortableForge", "RadiantRelics", "SalvageBin"]
-const econ_giving_augments = ["CalculatedLoss", "Dominance", "FourScore", "GachaAddict", "GoldenGifts1", "GoldenGifts2", "GrandGambler", "HighFive", "HyperRoll", "Recombobulator", "RichGetRicher"]
-const levelling_augments = ["ClearMind", "MaxLevel10"]
+const emblem_or_trait_augments = ["ArcanistEmblem", "ArcanistEmblem2", "ArcanistTrait", "AssassinEmblem", "AssassinEmblem2", "AssassinTrait", "BruteEmblem", "BruteEmblem2", "BruteTrait", "ChallengerEmblem", "ChallengerEmblem2", "ChallengerTrait", "ChemtechEmblem", "ChemtechEmblem2", "ChemtechTrait", "ClockworkTrait", "ClockworkTrait2", "DebonairEmblem", "DebonairEmblem2", "DebonairTrait", "EnchanterTrait", "EnchanterTrait2", "EnforcerTrait", "ExperimentalEmblem", "ExperimentalEmblem2", "ExperimentalTrait", "HeroEmblem", "HeroEmblem2", "HeroTrait", "HextechEmblem", "HextechEmblem2", "HextechTrait", "InnovatorTrait", "MercenaryEmblem", "MercenaryTrait", "MercenaryTrait2", "ScholarEmblem", "ScholarTrait", "ScholarTrait2", "ScrapEmblem", "ScrapTrait", "ScrapTrait2", "SniperEmblem", "SniperEmblem2", "SniperTrait", "SocialiteTrait", "SocialiteTrait2", "StrikerEmblem", "StrikerEmblem2", "StrikerTrait", "SyndicateEmblem", "SyndicateEmblem2", "SyndicateTrait", "TomeOfTraits1", "TwinshotTrait", "TwinshotTrait2"]
+const trait_combat_augments = ["ArcanistRunicShield1", "ArcanistRunicShield2", "ArcanistRunicShield3", "ArcanistSpellBlade", "AssassinCutthroat", "AssassinSmokeBomb", "BrawlerHPRegen1", "ChallengerEnGarde", "ChallengerForAllUnits", "ChemtechForAllUnits", "ChemtechInjection", "ChemtechOverload1", "ChemtechOverload2", "ClockworkBrokenStopwatch", "ColossusArmorPlating", "DebonairIrresistible", "DebonairVVIP", "EnchanterArdentCenser", "EnforcerSwiftJustice", "HeroStandBehindMe", "HextechForAllUnits", "HextechHexnova", "HextechStoredPower", "InnovatorSelfRepair", "MercenaryGoldReserves", "MercenaryPirates", "MutantUnstableEvolution", "ScholarLearning", "SniperNest", "SniperSharpshooter", "SocialiteDuet", "SocialiteShare", "StrikerConcussiveBlows", "StrikerOverpower", "SyndicateOneForAll", "YordleSoSmall"]
+const combat_buff_augments = ["Archangel2", "Ascension", "BlueBattery1", "BlueBattery2", "Disintegrator1", "Disintegrator2", "Disintegrator3", "Electrocharge1", "Electrocharge2", "Electrocharge3", "Featherweights1", "Featherweights2", "Featherweights3", "JeweledLotus", "LudensEcho1", "LudensEcho2", "LudensEcho3", "TriForce1", "TriForce2", "TriForce3", "Twins1", "Twins2", "Twins3", "VerdantVeil", "Weakspot", "Weakspot2", "Weakspot3","Diversify1", "Diversify2", "Diversify3", "SunfireBoard", "TargetDummies", "TitanicForce", "Traitless1", "Traitless2", "Traitless3", "WoodlandCharm", "WoodlandTrinket"]
+const positioning_combat_augments = ["Backfoot1", "Backfoot2", "Backfoot3", "Battlemage1", "Battlemage2", "Battlemage3", "Phalanx1", "Phalanx2", "Phalanx3", "Distancing", "Distancing2", "Distancing3", "Keepers1", "Keepers2", "MeleeStarBlade1", "MeleeStarBlade2", "MeleeStarBlade3"]
+const combat_healing_augments = ["CelestialBlessing1", "CelestialBlessing2", "CelestialBlessing3", "FirstAidKit", "SecondWind1", "SecondWind2", "ThrillOfTheHunt1", "ThrillOfTheHunt2", "Underdogs"]
+const item_providing_augments = ["BandOfThieves1", "BinaryAirdrop", "ComponentGrabBag", "ItemGrabBag1", "ItemGrabBag2", "PandorasItems", "PortableForge", "RadiantRelics", "SalvageBin", "FuturePeepers", "FuturePeepers2", "ScrapDumpsterDiving", "ThievingRascals"]
+const econ_giving_augments = ["CalculatedLoss", "Dominance", "FourScore", "GachaAddict", "GoldenGifts1", "GoldenGifts2", "GrandGambler", "HighFive", "HyperRoll", "Recombobulator", "RichGetRicher", "TheGoldenEgg", "ThreesCompany", "TradeSector", "TreasureTrove1", "TreasureTrove2", "TreasureTrove3", "TrueTwos", "Windfall", "SyndicatePayday"]
+const levelling_augments = ["ClearMind", "MaxLevel10", "SlowAndSteady", "ThriftShop", "ForceOfNature", "HighEndShopping"]
 const cyber_augments = ["CyberneticImplants1", "CyberneticImplants2", "CyberneticImplants3", "CyberneticShell1", "CyberneticShell2", "CyberneticShell3", "CyberneticUplink1", "CyberneticUplink2", "CyberneticUplink3"]
 const no_item_augments = ["MakeshiftArmor1", "MakeshiftArmor2", "MakeshiftArmor3", "Meditation1", "Meditation2", "Meditation3"]
-const actual_health_boost_augments = ["MetabolicAccelerator", ]
+const actual_health_boost_augments = ["MetabolicAccelerator", "TinyTitans"]
 
-const unknown_augments = ["Distancing", "Distancing2", "Distancing3", "Diversify1", "Diversify2", "Diversify3", "ForceOfNature", "FuturePeepers", "FuturePeepers2", "HighEndShopping", "Keepers1", "Keepers2", "MeleeStarBlade1", "MeleeStarBlade2", "MeleeStarBlade3"]
+// gacha addict is loaded dice OR golden ticket, assuming slow and steady is march of progress, wise spending is probably thrift shop
+// distancing is exiles, diversify is stand united, FON is new recruit (+1 prismatic), future peepers = future sight, high end shopping, keepers, meleeblade is knife's edge
 
 function break_down_items(player) {
   let all_items = []
@@ -79,6 +85,37 @@ function break_down_items(player) {
     }
   }
   return components;
+}
+
+function summarize_items(player) {
+  let all_items = []
+  for (let unit of player.units) { // go through units to get items
+    for (let item of unit.items) {
+      all_items.push(item)
+    }
+  }
+
+  let items = { offensive_items: 0, defensive_items: 0, mana_items: 0, debuff_items: 0, tank_items: 0, thieves_gloves: 0, components: 0 }
+
+  for (let item of all_items) {
+    if (offensive_items.includes(item)) {
+      items.offensive_items += 1;
+    } else if (defensive_items.includes(item)) {
+      items.defensive_items += 1;
+    } else if (mana_items.includes(item)) {
+      items.mana_items += 1;
+    } else if (debuff_items.includes(item)) {
+      items.debuff_items += 1;
+    } else if (tank_items.includes(item)) {
+      items.tank_items += 1;
+    } else if (item == 99) {
+      items.thieves_gloves += 1;
+    } else if (item >= 1 && item <= 9) {
+      items.components += 1;
+    }
+  }
+
+  return items;
 }
 
 function compile_traits(player) {
@@ -207,33 +244,81 @@ function compile_units(player) {
 }
 
 function compile_augments(player) {
-  let augments = {silver_healing: 0, silver_emblem: 0, silver_trait_combat: 0, silver_positional_combat: 0, silver_offensive_combat: 0, silver_defensive_combat: 0,
-    silver_econ: 0, }
+  let augments = { emblem_or_trait_augments: 0, trait_combat_augments: 0, 
+    combat_buff_augments: 0, positioning_combat_augments: 0, combat_healing_augments: 0, 
+    item_providing_augments: 0, levelling_augments: 0, actual_health_boost_augments: 0 }
+
+  for (let augment of player.augments) {
+    let tempAug = augment.substring(13)
+    if (emblem_or_trait_augments.includes(tempAug)) {
+      augments.emblem_or_trait_augments += 1;
+    } else if (trait_combat_augments.includes(tempAug)) {
+      augments.trait_combat_augments += 1;
+    } else if (combat_buff_augments.includes(tempAug) || cyber_augments.includes(tempAug) || no_item_augments.includes(tempAug)) {
+      augments.combat_buff_augments += 1;
+    } else if (positioning_combat_augments.includes(tempAug)) {
+      augments.positioning_combat_augments += 1;
+    } else if (combat_healing_augments.includes(tempAug)) {
+      augments.combat_healing_augments += 1;
+    } else if (item_providing_augments.includes(tempAug)) {
+      augments.item_providing_augments += 1;
+    } else if (levelling_augments.includes(tempAug)) {
+      augments.levelling_augments += 1;
+    } else if (actual_health_boost_augments.includes(tempAug)) {
+      augments.actual_health_boost_augments += 1;
+    } 
+  }
+  return augments;
 }
+
+const firstFullDayOfPatch = new Date(2022, 3, 7, 0, 0, 0, 0)
+const lastDayOfPatch = new Date(2022, 3, 13, 0, 0, 0, 0)
 
 function game_to_stats(game) {
   let players = []
-  for (let player  of game.info.participants) {
+  let gametime = new Date(game.info.game_datetime);
+  if (gametime > lastDayOfPatch || gametime < firstFullDayOfPatch) {
+    return players;
+  }
+  for (let player of game.info.participants) {
+    let top4 = false;
+    if (player.placement <= 4) {
+      top4 = true;
+    }
     let stats = {
+      match_id: game.metadata.match_id,
+      placement: player.placement,
+      top4: top4,
       ...break_down_items(player),
+      ...summarize_items(player),
       ...compile_traits(player),
       ...compile_units(player),
-      augments: player.augments
+      ...compile_augments(player)
     }
+    // console.log(Object.keys(stats).length)
     players.push(stats)
   }
-  return { match_id: game.metadata.match_id, game_datetime: game.info.game_datetime, players: players }
+  return players
+  // return { match_id: game.metadata.match_id, game_datetime: game.info.game_datetime, players: players }
 }
 
 function file_to_games(region) {
   let rawData = fs.readFileSync(`./gameData/full/${region}_games_all.json`)
   let regionData = JSON.parse(rawData)
-  let matches = []
+  // let matches = []
+  // for (game of regionData) {
+  //   let info = game_to_stats(game);
+  //   matches.push(info);
+  // }
+  // let jsonData = JSON.stringify(matches)
+  let players = []
   for (game of regionData) {
-    let info = game_to_stats(game);
-    matches.push(info);
+    let info = game_to_stats(game)
+    players = players.concat(info)
   }
-  fs.writeFile(`./finalData/${region}_data.json`, JSON.stringify(matches), 'utf8', (err) => {
+  let jsonData = JSON.stringify(players) 
+  console.log(`Number of ${region} placements: ${players.length}`)
+  fs.writeFile(`./finalData/${region}_data.json`, jsonData, 'utf8', (err) => {
     if (err)
       console.log(err);
     else {
@@ -247,7 +332,8 @@ function file_to_games(region) {
 //   ...compile_traits(player),
 //   ...compile_units(player)
 // }
+// console.log(compile_augments(player))
 
-for (let continent of continents) {
-  file_to_games(continent);
+for (let region of regions) {
+  file_to_games(region);
 }
