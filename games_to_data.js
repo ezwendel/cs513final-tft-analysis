@@ -20,10 +20,6 @@ const two_cost_units = ["ashe", "blitzcrank", "corki", "lulu", "quinn", "reksai"
 const three_cost_units = ["chogath", "ekko", "gangplank", "gnar", "leona", "lucian", "malzahar", "missfortune", "morgana", "senna", "tryndamere", "vex", "zac"]
 const four_cost_units = ["ahri", "alistar", "braum", "draven", "irelia", "jhin", "khazix", "orianna", "renata", "seraphine", "sivir", "vi"]
 const five_cost_units = ["galio", "jayce", "jinx", "kaisa", "silco", "tahmkench", "veigar", "viktor", "zeri"]
-const damage_units = ["brand", "caitlyn", "caitlyn", "twitch", "ziggs", "ashe", "corki", "talon", "warwick", "gangplank", "lucian", "malzahar", "missfortune", "tryndamere", "ahri", "draven", "irelia", "jhin", "khazix", "sivir",  "jinx", "kaisa", "veigar", "viktor", "zeri"]
-const support_units = ["jarvaniv", "nocturne", "lulu", "quinn", "syndra", "zilean", "zyra", "ekko", "senna", "seraphine", "renata", "silco"]
-const tank_units = ["camille", "darius", "illaoi", "poppy", "singed", "blitzcrank", "reksai", "sejuani", "swain", "chogath", "gnar", "leona", "morgana", "vex", "zac", "alistar", "braum", "vi", "galio", "tahmkench"]
-const unplaced_units = ["jayce"]
 const emblem_or_trait_augments = ["ArcanistEmblem", "ArcanistEmblem2", "ArcanistTrait", "AssassinEmblem", "AssassinEmblem2", "AssassinTrait", "BruteEmblem", "BruteEmblem2", "BruteTrait", "ChallengerEmblem", "ChallengerEmblem2", "ChallengerTrait", "ChemtechEmblem", "ChemtechEmblem2", "ChemtechTrait", "ClockworkTrait", "ClockworkTrait2", "DebonairEmblem", "DebonairEmblem2", "DebonairTrait", "EnchanterTrait", "EnchanterTrait2", "EnforcerTrait", "ExperimentalEmblem", "ExperimentalEmblem2", "ExperimentalTrait", "HeroEmblem", "HeroEmblem2", "HeroTrait", "HextechEmblem", "HextechEmblem2", "HextechTrait", "InnovatorTrait", "MercenaryEmblem", "MercenaryTrait", "MercenaryTrait2", "ScholarEmblem", "ScholarTrait", "ScholarTrait2", "ScrapEmblem", "ScrapTrait", "ScrapTrait2", "SniperEmblem", "SniperEmblem2", "SniperTrait", "SocialiteTrait", "SocialiteTrait2", "StrikerEmblem", "StrikerEmblem2", "StrikerTrait", "SyndicateEmblem", "SyndicateEmblem2", "SyndicateTrait", "TomeOfTraits1", "TwinshotTrait", "TwinshotTrait2"]
 const trait_combat_augments = ["ArcanistRunicShield1", "ArcanistRunicShield2", "ArcanistRunicShield3", "ArcanistSpellBlade", "AssassinCutthroat", "AssassinSmokeBomb", "BrawlerHPRegen1", "ChallengerEnGarde", "ChallengerForAllUnits", "ChemtechForAllUnits", "ChemtechInjection", "ChemtechOverload1", "ChemtechOverload2", "ClockworkBrokenStopwatch", "ColossusArmorPlating", "DebonairIrresistible", "DebonairVVIP", "EnchanterArdentCenser", "EnforcerSwiftJustice", "HeroStandBehindMe", "HextechForAllUnits", "HextechHexnova", "HextechStoredPower", "InnovatorSelfRepair", "MercenaryGoldReserves", "MercenaryPirates", "MutantUnstableEvolution", "ScholarLearning", "SniperNest", "SniperSharpshooter", "SocialiteDuet", "SocialiteShare", "StrikerConcussiveBlows", "StrikerOverpower", "SyndicateOneForAll", "YordleSoSmall"]
 const combat_buff_augments = ["Archangel2", "Ascension", "BlueBattery1", "BlueBattery2", "Disintegrator1", "Disintegrator2", "Disintegrator3", "Electrocharge1", "Electrocharge2", "Electrocharge3", "Featherweights1", "Featherweights2", "Featherweights3", "JeweledLotus", "LudensEcho1", "LudensEcho2", "LudensEcho3", "TriForce1", "TriForce2", "TriForce3", "Twins1", "Twins2", "Twins3", "VerdantVeil", "Weakspot", "Weakspot2", "Weakspot3","Diversify1", "Diversify2", "Diversify3", "SunfireBoard", "TargetDummies", "TitanicForce", "Traitless1", "Traitless2", "Traitless3", "WoodlandCharm", "WoodlandTrinket"]
@@ -35,6 +31,11 @@ const levelling_augments = ["ClearMind", "MaxLevel10", "SlowAndSteady", "ThriftS
 const cyber_augments = ["CyberneticImplants1", "CyberneticImplants2", "CyberneticImplants3", "CyberneticShell1", "CyberneticShell2", "CyberneticShell3", "CyberneticUplink1", "CyberneticUplink2", "CyberneticUplink3"]
 const no_item_augments = ["MakeshiftArmor1", "MakeshiftArmor2", "MakeshiftArmor3", "Meditation1", "Meditation2", "Meditation3"]
 const actual_health_boost_augments = ["MetabolicAccelerator", "TinyTitans"]
+
+// const damage_units = ["brand", "caitlyn", "caitlyn", "twitch", "ziggs", "ashe", "corki", "talon", "warwick", "gangplank", "lucian", "malzahar", "missfortune", "tryndamere", "ahri", "draven", "irelia", "jhin", "khazix", "sivir",  "jinx", "kaisa", "veigar", "viktor", "zeri"]
+// const support_units = ["jarvaniv", "nocturne", "lulu", "quinn", "syndra", "zilean", "zyra", "ekko", "senna", "seraphine", "renata", "silco"]
+// const tank_units = ["camille", "darius", "illaoi", "poppy", "singed", "blitzcrank", "reksai", "sejuani", "swain", "chogath", "gnar", "leona", "morgana", "vex", "zac", "alistar", "braum", "vi", "galio", "tahmkench"]
+// const unplaced_units = ["jayce"]
 
 // gacha addict is loaded dice OR golden ticket, assuming slow and steady is march of progress, wise spending is probably thrift shop
 // distancing is exiles, diversify is stand united, FON is new recruit (+1 prismatic), future peepers = future sight, high end shopping, keepers, meleeblade is knife's edge
@@ -246,7 +247,7 @@ function compile_units(player) {
 function compile_augments(player) {
   let augments = { emblem_or_trait_augments: 0, trait_combat_augments: 0, 
     combat_buff_augments: 0, positioning_combat_augments: 0, combat_healing_augments: 0, 
-    item_providing_augments: 0, levelling_augments: 0, actual_health_boost_augments: 0 }
+    item_providing_augments: 0, levelling_augments: 0, actual_health_boost_augments: 0, econ_giving_augments: 0 }
 
   for (let augment of player.augments) {
     let tempAug = augment.substring(13)
@@ -266,6 +267,8 @@ function compile_augments(player) {
       augments.levelling_augments += 1;
     } else if (actual_health_boost_augments.includes(tempAug)) {
       augments.actual_health_boost_augments += 1;
+    } else if (econ_giving_augments.includes(tempAug)) {
+      augments.econ_giving_augments += 1;
     } 
   }
   return augments;
